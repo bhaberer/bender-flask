@@ -14,6 +14,6 @@ def status():
 
 @app.route('/pax')
 def next_pax():
-  return bender.PAXES
+  return flask.jsonify(bender.PAXES)
 
 app.run
