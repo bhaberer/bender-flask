@@ -9,4 +9,4 @@ app = flask.Flask(__name__)
 def success():
   return 'I am a success!', 200
 
-app.run(debug=True, host='0.0.0.0', port=80)
+app.run
