@@ -16,4 +16,4 @@ def status():
 def next_pax():
   return bender.PAXES
 
-app.run(debug=True)
+app.run
