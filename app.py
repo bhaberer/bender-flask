@@ -1,12 +1,19 @@
 import flask
-from flask import request
 import logging
 import time
+import json
+
+from plugins.bender import bender
 
 app = flask.Flask(__name__)
 
-@app.route('/')
-def success():
-  return 'I am a success!', 200
+@app.route('/status')
+def status():
+  return 'I am alive!', 200
 
-app.run
+
+@app.route('/pax')
+def next_pax():
+  return bender.PAXES
+
+app.run(debug=True)
